@@ -4,6 +4,7 @@ import Card from "./component/Card";
 
 function App() {
   let plans=[
+    //free plan details
     {
       plan:"FREE",
       planEnabler:true,
@@ -26,6 +27,7 @@ function App() {
       report:"monthly status report",
       reportEnabler:false
     },
+    //plus plan details
     {
       plan:"PLUS",
       planEnabler:true,
@@ -49,6 +51,7 @@ function App() {
       reportEnabler:false
 
     },
+    //pro plan details
     {
       plan:"PRO",
       planEnabler:true,
@@ -78,14 +81,10 @@ function App() {
     <section className="pricing py-5">
   <div className="container">
     <div className="row">
-      {/* <Card data={plans[0]}/>
+      {/* calling price card */}
+      <Card data={plans[0]}/>
       <Card data={plans[1]}/>
       <Card data={plans[2]}/>
-      */}
-
-      {
-        plans.map((e,i)=><Card data={e} />)
-      }
     </div>
   </div>
 </section>
